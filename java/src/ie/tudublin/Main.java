@@ -29,17 +29,7 @@ public class Main
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Heart());		
-<<<<<<< HEAD
 	}*/
-=======
-	}
-	public static void yasc()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new YASC());
-    }
-
->>>>>>> dfd3854bfd55dc8d52426519422be5b61965a018
 	public static void main(String[] args)
 	{
 		Main main = new Main();
@@ -47,13 +37,7 @@ public class Main
 		//main.heart();
 
 		//main.startUI();	
-<<<<<<< HEAD
 		main.cube();
 		//main.rot();			
-=======
-		//main.cube();
-		main.rot();			
-		yasc();
->>>>>>> dfd3854bfd55dc8d52426519422be5b61965a018
 	}
 }
