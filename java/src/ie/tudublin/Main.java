@@ -3,6 +3,7 @@ package ie.tudublin;
 import javax.swing.JFrame;
 
 import c21333116.YASC;
+import c21333116.EndText;
 import example.CubeVisual;
 import example.Heart;
 import example.MyVisual;
@@ -27,10 +28,11 @@ public class Main
         processing.core.PApplet.runSketch( a, new MyVisual());		
 	}
 
-	public void heart()
+	/*public void heart()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Heart());		
+<<<<<<< HEAD
 	}
 	public static void yasc()
 	{
@@ -43,13 +45,22 @@ public class Main
 	
 	 
 	public static void main(String[] args) throws InterruptedException
+=======
+	}*/
+	public static void main(String[] args)
+>>>>>>> d71dc04adc3906dac918b60466ed971d35f00436
 	{
 		Main main = new Main();
 		//main.startUI();	
 		//main.heart();
 		//main.startUI();	
+
+		main.cube();
+		//main.rot();			
+
 		//main.cube();
 		//main.rot();			
+<<<<<<< HEAD
 		//main.yasc();
 
 
@@ -62,5 +73,9 @@ public class Main
 		confetti.run();
 		
 		
+=======
+		//yasc();
+		main.endtext();
+>>>>>>> d71dc04adc3906dac918b60466ed971d35f00436
 	}
 }
