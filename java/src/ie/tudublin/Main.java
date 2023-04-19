@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import javax.swing.JFrame;
+
 import c21333116.YASC;
 import example.CubeVisual;
 import example.Heart;
@@ -36,15 +38,29 @@ public class Main
         processing.core.PApplet.runSketch( a, new YASC());
     }
 
-	public static void main(String[] args)
+	
+
+	
+	 
+	public static void main(String[] args) throws InterruptedException
 	{
 		Main main = new Main();
 		//main.startUI();	
 		//main.heart();
-
 		//main.startUI();	
 		//main.cube();
-		main.rot();			
-		yasc();
+		//main.rot();			
+		//main.yasc();
+
+
+		JFrame frame = new JFrame("Confetti");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Confetti confetti = new Confetti(800, 600);
+		frame.getContentPane().add(confetti);
+		frame.pack();
+		frame.setVisible(true);
+		confetti.run();
+		
+		
 	}
 }

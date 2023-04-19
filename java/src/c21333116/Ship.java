@@ -19,7 +19,6 @@ public class Ship {
     }
 
 
-
     public PVector getPos() {
         return pos;
     }
@@ -109,3 +108,9 @@ public class Ship {
     
     
 }
+
+
+
+
+
+
