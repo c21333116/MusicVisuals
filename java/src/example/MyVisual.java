@@ -32,7 +32,7 @@ public class MyVisual extends Visual
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
-        h = new Heart(this);
+        //h = new Heart(this);
 
     }
 
@@ -62,8 +62,8 @@ public class MyVisual extends Visual
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        //wf.render();
-        //abv.render();
-        h.render();
+        wf.render();
+        abv.render();
+        //h.render();
     }
 }
