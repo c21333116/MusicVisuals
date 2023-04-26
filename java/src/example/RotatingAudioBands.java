@@ -19,7 +19,7 @@ public class RotatingAudioBands extends Visual {
         {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
-            
+           
         }
  
     }
@@ -28,14 +28,14 @@ public class RotatingAudioBands extends Visual {
     {
         colorMode(HSB);
         noCursor();
-        
+       
         setFrameSize(256);
 
         startMinim();
         loadAudio("boysaliar.mp3");
         getAudioPlayer().play();
-        //startListening(); 
-        
+        //startListening();
+       
     }
 
     float radius = 200;
@@ -43,6 +43,9 @@ public class RotatingAudioBands extends Visual {
     float smoothedBoxSize = 0;
 
     float rot = 0;
+
+    float angle = 0;
+    float heartSize = 200;
 
     public void draw()
     {
@@ -56,34 +59,50 @@ public class RotatingAudioBands extends Visual {
             e.printStackTrace();
         }
         calculateFrequencyBands();
-        background(0);
-        noFill();
-        stroke(255);
-        lights();
-        stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        camera(0, -500, 500, 0, 0, 0, 0, 1, 0);
-        //translate(0, 0, -250);
-
-        rot += getAmplitude() / 8.0f;
-
-        rotateY(rot);
-        float[] bands = getSmoothedBands();
-        for(int i = 0 ; i < bands.length ; i ++)
+   
+        background(255);
+        strokeWeight(2);
+        fill(255, 192, 203);
+   
+        float amplitude = getSmoothedAmplitude();
+        float heartScale = 0.5f + amplitude * 0.5f;
+        heartSize = 30 * heartScale;
+   
+        translate(width/2, height/2);
+        rotateY(angle);
+   
+        // Draw left half of heart
+        beginShape();
+        for (float a = 0; a < PI - angle; a += 0.01)
         {
-            float theta = map(i, 0, bands.length, 0, TWO_PI);
-
-            stroke(map(i, 0, bands.length, 0, 255), 255, 255);
-            float x = sin(theta) * radius;
-            float z = cos(theta) * radius;
-            float h = bands[i];
-            pushMatrix();
-            translate(x, - h / 2 , z);
-            rotateY(theta);
-            box(50, h, 50);
-            popMatrix();
+            float x = 16 * pow(sin(a), 3);
+            float y = -((13 * cos(a)) - (5 * cos(2*a)) - (2 * cos(3*a)) - cos(4*a));
+            x *= heartSize;
+            y *= heartSize;
+            vertex(x, y);
         }
-
+        endShape(CLOSE);
+   
+        // Draw right half of heart
+        beginShape();
+        for (float a = PI + angle; a < TWO_PI; a += 0.01)
+        {
+            float x = 16 * pow(sin(a), 3);
+            float y = -((13 * cos(a)) - (5 * cos(2*a)) - (2 * cos(3*a)) - cos(4*a));
+            x *= heartSize;
+            y *= heartSize;
+            vertex(x, y);
+        }
+        endShape(CLOSE);
+   
+        angle += 0.001; // Increase the angle to slowly rip the heart
+   
+        // Reset angle when heart is fully ripped
+        if (angle >= PI/2) {
+            angle = 0;
+        }
     }
-    float angle = 0;
+   
 
+   
 }

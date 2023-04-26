@@ -5,6 +5,7 @@ import example.CubeVisual;
 import example.Heart;
 import example.MyVisual;
 import example.RotatingAudioBands;
+import example.secondHeart;
 
 public class Main
 {	
@@ -35,16 +36,22 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new YASC());
     }
+	public static void runsecondHeart()
+	{
+		String[] a = {"MAIN"};
+		processing.core.PApplet.runSketch(a, new secondHeart());
+	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		//main.startUI();	
 		//main.heart();
-
+		
+		//main.runsecondHeart();
 		//main.startUI();	
 		//main.cube();
 		main.rot();			
-		yasc();
+		//yasc();
 	}
 }

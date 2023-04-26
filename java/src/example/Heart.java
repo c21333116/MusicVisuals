@@ -14,7 +14,9 @@ public class Heart extends Visual{
 
     translate(width/2, height/2);
 
-    noFill();
+    //noFill();
+    fill(120,150,200);
+    stroke(2);
     stroke(255);
     beginShape();
     for (float a = 0; a < TWO_PI; a+= 0.01){
@@ -24,6 +26,8 @@ public class Heart extends Visual{
       vertex(x, y);
     }
     endShape();
+
+    
   }
   
 }
