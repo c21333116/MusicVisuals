@@ -4,7 +4,7 @@ import c21333116.YASC;
 import example.CubeVisual;
 import example.Heart;
 import example.MyVisual;
-import example.RotatingAudioBands;
+import example.myHeart;
 import example.secondHeart;
 
 public class Main
@@ -18,7 +18,7 @@ public class Main
 	public void rot()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new RotatingAudioBands());		
+        processing.core.PApplet.runSketch( a, new myHeart());		
 	}
 	public void startUI()
 	{

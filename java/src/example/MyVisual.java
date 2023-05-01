@@ -42,6 +42,10 @@ public class MyVisual extends Visual
         }
     }
 
+    // make a for loop to iterate through an array of stars
+
+    
+    
     public void draw()
     {
         background(0);
