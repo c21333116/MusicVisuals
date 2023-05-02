@@ -109,9 +109,9 @@ public class Main
 		//main.startUI();	
 
 		//main.cube();
-		//main.circle();
+		main.circle();
 		//main.myHeart();
-		main.twerking();
+		//main.twerking();
 		//main.rot();			
 
 		//main.cube();
@@ -119,13 +119,13 @@ public class Main
 		//main.yasc();
 
 
-		JFrame frame = new JFrame("Confetti");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Confetti confetti = new Confetti(800, 600);
-		frame.getContentPane().add(confetti);
-		frame.pack();
-		frame.setVisible(true);
-		confetti.run();
+		// JFrame frame = new JFrame("Confetti");
+		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// Confetti confetti = new Confetti(800, 600);
+		// frame.getContentPane().add(confetti);
+		// frame.pack();
+		// frame.setVisible(true);
+		// confetti.run();
 		
 		
 
