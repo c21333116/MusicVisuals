@@ -74,9 +74,8 @@ public class Main
 		// frame.setVisible(true);
 		// //confetti.run();
 
-
-
-		
+		//yasc();
+		//main.endtext();
 	}
 	
 

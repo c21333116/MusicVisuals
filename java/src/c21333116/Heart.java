@@ -136,10 +136,7 @@ public class Heart extends Visual{
 
     
   }
-
   
-
-
   public void render(){
 
     float halfH = height / 2;
