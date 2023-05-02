@@ -1,20 +1,24 @@
 package ie.tudublin;
-//import processing.core.PApplet;
-
-import java.util.Random;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Confetti extends JPanel {
     private static final long serialVersionUID = 1L;
-    private ArrayList<Shape> shapes = new ArrayList<Shape>();
+    private ArrayList<ConfettiShape> shapes = new ArrayList<>();
     private int width;
     private int height;
     private Random rand = new Random();
+    private int xText1 = 0;
+    private int xText2 = 0;
+    private int xText3 = 0;
+    private int xText4 = 0;
+
 
     public Confetti(int width, int height) {
         this.width = width;
@@ -25,23 +29,45 @@ public class Confetti extends JPanel {
     }
 
     public void addShape() {
-        Shape shape = new Shape(rand.nextInt(width), 0, rand.nextInt(10) + 5, rand.nextInt(10) + 5, new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256)));
+        ConfettiShape shape = new ConfettiShape(rand.nextInt(width), 0, rand.nextInt(10) + 5, rand.nextInt(10) + 5, new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256)));
         shapes.add(shape);
     }
 
     public void update() {
         for (int i = 0; i < shapes.size(); i++) {
-            Shape shape = shapes.get(i);
+            ConfettiShape shape = shapes.get(i);
             shape.update();
             if (shape.getY() > height) {
                 shapes.remove(i);
             }
         }
+        xText1 += 5;
+        if (xText1 > width) {
+            xText1 = 0;
+        }
+        xText2 += 5;
+        if (xText2 > width) {
+            xText2 = 0;
+        }
+        xText3 += 5;
+        if (xText3 > width) {
+            xText3 = 0;
+        }
+        xText4 += 5;
+        if (xText4 > width) {
+            xText4 = 0;
+        }
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for (Shape shape : shapes) {
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 72));
+        g.drawString("Boy's A Liar", xText1, height / 4);
+        g.drawString("FT. Ice Spice", xText2, 370);
+        g.drawString("Pink Pantress", xText3, height / 2 );
+        g.drawString("        By:", xText4, 230);
+        for (ConfettiShape shape : shapes) {
             shape.draw(g);
         }
     }
@@ -65,14 +91,14 @@ public class Confetti extends JPanel {
         confetti.run();
     }
 
-    private class Shape {
+    private class ConfettiShape {
         private int x;
         private int y;
         private int width;
         private int height;
         private Color color;
 
-        public Shape(int x, int y, int width, int height, Color color) {
+        public ConfettiShape(int x, int y, int width, int height, Color color) {
             this.x = x;
             this.y = y;
             this.width = width;
@@ -81,7 +107,7 @@ public class Confetti extends JPanel {
         }
 
         public void update() {
-            y += rand.nextInt(5) + 1;
+            y += rand.nextInt(5) + 0.3;
         }
 
         public void draw(Graphics g) {
@@ -98,3 +124,4 @@ public class Confetti extends JPanel {
         }
     }
 }
+

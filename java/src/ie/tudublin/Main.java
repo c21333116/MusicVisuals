@@ -39,11 +39,20 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new MyVisual());		
 	}
+	public void YASC()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new YASC());		
+	}
 
 	public void heart()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Heart());		
+<<<<<<< HEAD
+	}*/
+	public static void main(String[] args) throws InterruptedException
+=======
 
 
 	}
@@ -90,6 +99,7 @@ public class Main
 
 	public static void main(String[] args) throws InterruptedException
 
+>>>>>>> 78b1415b517ceb8d119910ca885a45e199531ca1
 	{
 		Main main = new Main();
 		//main.startUI();	
@@ -116,7 +126,11 @@ public class Main
 
 		//main.cube();
 		//main.rot();			
+<<<<<<< HEAD
+		main.YASC();
+=======
 		//main.yasc();
+>>>>>>> 78b1415b517ceb8d119910ca885a45e199531ca1
 
 
 		// JFrame frame = new JFrame("Confetti");
@@ -128,9 +142,13 @@ public class Main
 		// confetti.run();
 		
 		
+<<<<<<< HEAD
+=======
 
 		//yasc();
 		//main.endtext();
 
+>>>>>>> 78b1415b517ceb8d119910ca885a45e199531ca1
 	}
-}
+	
+	}
