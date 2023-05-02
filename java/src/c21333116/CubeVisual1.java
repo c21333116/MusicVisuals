@@ -9,14 +9,14 @@ public class CubeVisual1 extends Visual
     int yPos = 0;
     int xPos = 0;
 
-    // OurVisual v;
+    OurVisual v;
 
 
-	// public CubeVisual1(OurVisual v)
-	// {
-	// 		this.v = v;
+	public CubeVisual1(OurVisual v)
+	{
+			this.v = v;
 			
-	// }
+	}
 
 
     public void settings()

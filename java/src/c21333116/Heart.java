@@ -2,7 +2,7 @@ package c21333116;
 //import processing.core.*;
 import ddf.minim.AudioBuffer;
 import example.AudioBandsVisual;
-import example.MyVisual;
+import c21333116.OurVisual;
 import example.WaveForm;
 //import ie.tudublin.*;
 import ie.tudublin.Visual;

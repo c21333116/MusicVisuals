@@ -1,6 +1,6 @@
 package example;
 
-import c21333116.Heart;
+//import c21333116.Heart;
 import ie.tudublin.*;
 
 public class MyVisual extends Visual
@@ -46,6 +46,10 @@ public class MyVisual extends Visual
         }
     }
 
+    // make a for loop to iterate through an array of stars
+
+    
+    
     public void draw()
     {
         background(0);
