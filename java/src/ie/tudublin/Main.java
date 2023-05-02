@@ -10,6 +10,7 @@ import example.MyVisual;
 import example.myHeart;
 import example.secondHeart;
 import example.circle;
+import example.twerking;
 
 import example.CubeVisual1;
 
@@ -47,6 +48,14 @@ public class Main
 
 	}
 
+	public void twerking()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new twerking());		
+
+
+	}
+
 	public void circle()
 	{
 		String[] a = {"MAIN"};
@@ -63,7 +72,7 @@ public class Main
 
 	}
 
-	
+
 	public void yasc()
 	{
 		String[] a = {"MAIN"};
@@ -100,8 +109,9 @@ public class Main
 		//main.startUI();	
 
 		//main.cube();
-		main.circle();
-		main.myHeart();
+		//main.circle();
+		//main.myHeart();
+		main.twerking();
 		//main.rot();			
 
 		//main.cube();

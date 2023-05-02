@@ -63,16 +63,14 @@ public class twerking extends Visual{
         fill(0);
         stroke(2);
         
-        // ass 1 ellipse 
-        ellipse(290,147,20,20);
-        fill(0);
-        stroke(30);
-        
-        // ass 2 elllipse
-        ellipse(310,147,20,20);
-        fill(0);
-        stroke(30);
-        
+        float ass1Size = 20 + getSmoothedAmplitude() * 150;
+        float ass1Offset = 147 + getSmoothedAmplitude() * 50;
+        ellipse(290, ass1Offset, ass1Size, ass1Size);
+
+        float ass2Size = 20 + getSmoothedAmplitude() * 150;
+        float ass2Offset = 147 + getSmoothedAmplitude() * 50;
+        ellipse(310, ass2Offset, ass2Size, ass2Size);
+            
         
         line(290,160,290,180);
         strokeWeight(3);
