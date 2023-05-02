@@ -53,8 +53,28 @@ public class circle extends Visual {
        
         background(255);
 
-
-        
+  
+            int xPos = 50;
+            int yPos = 50;
+            int circleSize = 20;
+            int spacing = 30;
+            
+            while (xPos < width) {
+              fill(255,0,0);
+              
+              ellipse(xPos, yPos, circleSize, circleSize);
+              
+             
+              
+              yPos += spacing;
+              circleSize += 10;
+              
+              if (yPos > height) {
+                yPos = 50;
+                xPos += spacing;
+              }
+            }
+          }
 
     }
-}
+

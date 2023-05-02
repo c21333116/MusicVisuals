@@ -9,6 +9,7 @@ import example.Heart;
 import example.MyVisual;
 import example.myHeart;
 import example.secondHeart;
+import example.circle;
 
 import example.CubeVisual1;
 
@@ -46,6 +47,14 @@ public class Main
 
 	}
 
+	public void circle()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new circle());		
+
+
+	}
+
 	public void yasc()
 	{
 		String[] a = {"MAIN"};
@@ -72,16 +81,17 @@ public class Main
 		//main.runsecondHeart();
 		//main.startUI();	
 		//main.cube();
-		main.rot();			
+		//main.rot();			
 		//yasc();
 			//main.yasc();
 		//main.cube2();	
 		//main.cube();
-		main.rot();			
+		//main.rot();			
 
 		//main.startUI();	
 
-		main.cube();
+		//main.cube();
+		main.circle();
 		//main.rot();			
 
 		//main.cube();
