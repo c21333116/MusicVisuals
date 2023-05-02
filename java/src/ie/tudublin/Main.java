@@ -55,6 +55,15 @@ public class Main
 
 	}
 
+	public void myHeart()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new myHeart());		
+
+
+	}
+
+	
 	public void yasc()
 	{
 		String[] a = {"MAIN"};
@@ -92,6 +101,7 @@ public class Main
 
 		//main.cube();
 		main.circle();
+		main.myHeart();
 		//main.rot();			
 
 		//main.cube();
