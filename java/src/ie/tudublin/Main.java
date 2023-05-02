@@ -7,7 +7,12 @@ import c21333116.EndText;
 import example.CubeVisual;
 import example.Heart;
 import example.MyVisual;
-import example.RotatingAudioBands;
+import example.myHeart;
+import example.secondHeart;
+import example.circle;
+import example.twerking;
+
+import example.CubeVisual1;
 
 public class Main
 {	
@@ -17,10 +22,17 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new CubeVisual());		
 	}
+
+	public void cube2()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new CubeVisual1());		
+	}
+
 	public void rot()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new RotatingAudioBands());		
+        processing.core.PApplet.runSketch( a, new myHeart());		
 	}
 	public void startUI()
 	{
@@ -33,24 +45,92 @@ public class Main
         processing.core.PApplet.runSketch( a, new YASC());		
 	}
 
-	/*public void heart()
+	public void heart()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Heart());		
+<<<<<<< HEAD
 	}*/
 	public static void main(String[] args) throws InterruptedException
+=======
+
+
+	}
+
+	public void twerking()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new twerking());		
+
+
+	}
+
+	public void circle()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new circle());		
+
+
+	}
+
+	public void myHeart()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new myHeart());		
+
+
+	}
+
+
+	public void yasc()
+	{
+		String[] a = {"MAIN"};
+
+        processing.core.PApplet.runSketch( a, new YASC());
+    }
+	public static void runsecondHeart()
+	{
+		String[] a = {"MAIN"};
+		processing.core.PApplet.runSketch(a, new secondHeart());
+
+        processing.core.PApplet.runSketch( a, new YASC());		
+
+	}
+
+	public static void main(String[] args) throws InterruptedException
+
+>>>>>>> 78b1415b517ceb8d119910ca885a45e199531ca1
 	{
 		Main main = new Main();
 		//main.startUI();	
 		//main.heart();
+
+		
+		//main.runsecondHeart();
+		//main.startUI();	
+		//main.cube();
+		//main.rot();			
+		//yasc();
+			//main.yasc();
+		//main.cube2();	
+		//main.cube();
+		//main.rot();			
+
 		//main.startUI();	
 
-		main.cube();
+		//main.cube();
+		//main.circle();
+		//main.myHeart();
+		main.twerking();
 		//main.rot();			
 
 		//main.cube();
 		//main.rot();			
+<<<<<<< HEAD
 		main.YASC();
+=======
+		//main.yasc();
+>>>>>>> 78b1415b517ceb8d119910ca885a45e199531ca1
 
 
 		JFrame frame = new JFrame("Confetti");
@@ -62,6 +142,13 @@ public class Main
 		confetti.run();
 		
 		
+<<<<<<< HEAD
+=======
+
+		//yasc();
+		//main.endtext();
+
+>>>>>>> 78b1415b517ceb8d119910ca885a45e199531ca1
 	}
 	
 	}

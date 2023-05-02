@@ -15,11 +15,6 @@ public class Heart extends Visual{
 	float x1dir, x2dir, y1dir, y2dir;
 	float c = 0;
 
-  public Heart(MyVisual mv){
-
-    this.mv = mv;
-  }
-
   public void settings(){
 
     size(1024, 500);
@@ -74,20 +69,26 @@ public class Heart extends Visual{
   public void draw(){
     //background(0);
 
-    //translate(width/2, height/2);
-
+    /*
+    translate(width/2, height/2);
+    pushMatrix();
+    popMatrix();
     //noFill();
     //stroke(255);
-    /*beginShape();
+    fill(0);
+    beginShape();
     for (float a = 0; a < TWO_PI; a+= 0.01){
       float r = 10;
       float x = r * 16 * pow(sin(a), 3);
       float y = -r * (13 * cos(a) - 5 * cos(2 * a) - 2 * cos(3 * a) - cos(4 * a));
       vertex(x, y);
     }
-    endShape();*/
+    endShape();    */
+    
+    
 
 
+    
     strokeWeight(2);
     //stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
 		stroke(c, 175, 255);
@@ -119,8 +120,10 @@ public class Heart extends Visual{
 			y2dir = - y2dir;
 		}
 
+    
   }
 
+  
 
 
   public void render(){
@@ -132,9 +135,10 @@ public class Heart extends Visual{
     
     for(int i = 0 ; i < ab.size() ; i ++)
       {
-          float c = map(ab.get(i), -1, 1, 0, 255);
-          //float c = map(i, 0, ab.size(), 0, 255);
+          //float c = map(ab.get(i), -1, 1, 0, 255);
+          float c = map(i, 0, ab.size(), 0, 255);
           stroke(c, 255, 255);
+          //stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
           float f = lerpedBuffer[i] * halfH * 4.0f;
           line(halfH + f, i, halfH - f, i);                    
       }
