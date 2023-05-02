@@ -40,10 +40,6 @@ public class Main
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Heart());		
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f9accc956a1d8e67f016b49965d5cef55db249e3
 	}
 
 	public void yasc()
@@ -52,28 +48,16 @@ public class Main
         processing.core.PApplet.runSketch( a, new YASC());		
 	}
 
-<<<<<<< HEAD
-=======
-	
-
-	
-	 
-	public static void main(String[] args) throws InterruptedException
-=======
-	}*/
->>>>>>> f9accc956a1d8e67f016b49965d5cef55db249e3
 	public static void main(String[] args)
->>>>>>> d71dc04adc3906dac918b60466ed971d35f00436
 	{
 		Main main = new Main();
 		//main.startUI();	
 		//main.heart();
-<<<<<<< HEAD
 		//main.yasc();
 		//main.cube2();	
 		//main.cube();
 		main.rot();			
-=======
+
 		//main.startUI();	
 
 		main.cube();
