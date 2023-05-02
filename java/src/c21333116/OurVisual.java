@@ -30,11 +30,7 @@ public class OurVisual extends Visual{
     h = new Heart(this);
     yasc = new YASC(this);
   }
-
-  // public void draw(){
-  //   background(0);
-    
-  // }
+  
 
   public void keyPressed()
     {
@@ -48,6 +44,9 @@ public class OurVisual extends Visual{
 
         if (key == '1'){
           yasc.draw();
+
+          fill(255,0, 0);
+          circle(400, 400, 200);
 
         }
 
@@ -66,6 +65,7 @@ public class OurVisual extends Visual{
 
     public void draw(){
       background(0);
+
     }
   
 
