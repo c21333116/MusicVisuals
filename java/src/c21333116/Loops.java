@@ -2,9 +2,19 @@ package c21333116;
 
 import processing.core.PApplet;
 
+
 public class Loops extends PApplet {
 
 	int mode = 0;
+
+	OurVisual v;
+
+
+	public Loops(OurVisual v)
+	{
+			this.v = v;
+			
+	}
 
 	public void settings() {
 		size(1000, 1000);

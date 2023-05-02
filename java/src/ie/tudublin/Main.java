@@ -2,27 +2,25 @@ package ie.tudublin;
 
 import javax.swing.JFrame;
 
+import c21333116.Confetti;
+import c21333116.CubeVisual;
 import c21333116.YASC;
+import c21333116.CubeVisual1;
 import c21333116.EndText;
-import example.CubeVisual;
-import example.Heart;
+import c21333116.Heart;
+import c21333116.Loops;
+
 import example.MyVisual;
+//import c21333116.OurVisual;
 import example.RotatingAudioBands;
-import example.CubeVisual1;
 
 public class Main
 {	
 
-	public void cube()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new CubeVisual());		
-	}
-
 	public void cube2()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new CubeVisual1());		
+        processing.core.PApplet.runSketch( a, new CubeVisual());		
 	}
 
 	public void rot()
@@ -36,6 +34,13 @@ public class Main
         processing.core.PApplet.runSketch( a, new MyVisual());		
 	}
 
+	// public void boysaliar()
+	// {
+	// 	String[] a = {"MAIN"};
+  //       processing.core.PApplet.runSketch( a, new OurVisual());		
+	// }
+
+	
 	public void heart()
 	{
 		String[] a = {"MAIN"};
@@ -48,40 +53,45 @@ public class Main
         processing.core.PApplet.runSketch( a, new YASC());		
 	}
 
-	public static void main(String[] args)
+	public void loops()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Loops());		
+	}
+	
+	public void cube1()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new CubeVisual1());		
+	}
+
+	public static void main(String[] args) throws InterruptedException
 	{
 		Main main = new Main();
+
 		//main.startUI();	
 		//main.heart();
 		//main.yasc();
-		//main.cube2();	
-		//main.cube();
-		main.rot();			
+		//main.cube1();
+		//main.cube2();
+		//main.rot();			
 
 		//main.startUI();	
 
-		main.cube();
-		//main.rot();			
-
-		//main.cube();
-		//main.rot();			
-<<<<<<< HEAD
-		//main.yasc();
+		//main.loops();
+		//main.endtext();
+		//main.boysaliar();
 
 
+
+		//confetti JFrame code
 		JFrame frame = new JFrame("Confetti");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Confetti confetti = new Confetti(800, 600);
 		frame.getContentPane().add(confetti);
 		frame.pack();
 		frame.setVisible(true);
-		confetti.run();
-		
-		
-=======
-		//yasc();
-		main.endtext();
->>>>>>> d71dc04adc3906dac918b60466ed971d35f00436
->>>>>>> f9accc956a1d8e67f016b49965d5cef55db249e3
+		//confetti.run();
+
 	}
 }

@@ -20,6 +20,17 @@ public class YASC extends PApplet
 	Ship ship9;
 	Ship ship10;
 */
+	
+	OurVisual v;
+
+
+	public YASC(OurVisual v)
+	{
+			this.v = v;
+			
+	}
+
+
 	public boolean[] keys = new boolean[1024]; 
 
 	public void keyPressed()

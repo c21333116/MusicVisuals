@@ -1,6 +1,9 @@
-package example;
+package c21333116;
 //import processing.core.*;
 import ddf.minim.AudioBuffer;
+import example.AudioBandsVisual;
+import example.MyVisual;
+import example.WaveForm;
 //import ie.tudublin.*;
 import ie.tudublin.Visual;
 
@@ -9,11 +12,21 @@ public class Heart extends Visual{
   WaveForm wf;
   AudioBandsVisual abv;
   float[] lerpedBuffer;
-  MyVisual mv;
 
   float x1, y1, x2, y2;
 	float x1dir, x2dir, y1dir, y2dir;
 	float c = 0;
+
+
+
+  OurVisual v;
+
+
+	public Heart(OurVisual v)
+	{
+			this.v = v;
+			
+	}
 
   public void settings(){
 
@@ -41,6 +54,7 @@ public class Heart extends Visual{
     colorMode(HSB);
 		background(0);
 
+    /*
 		x1 = random(0, width);
 		x2 = random(0, width);
 		y1 = random(0, height);
@@ -54,7 +68,7 @@ public class Heart extends Visual{
 		y2dir = random(-range, range);
 
 		smooth();
-  
+    */
   }
 
   public void keyPressed()
@@ -69,7 +83,7 @@ public class Heart extends Visual{
   public void draw(){
     //background(0);
 
-    /*
+    
     translate(width/2, height/2);
     pushMatrix();
     popMatrix();
@@ -83,7 +97,7 @@ public class Heart extends Visual{
       float y = -r * (13 * cos(a) - 5 * cos(2 * a) - 2 * cos(3 * a) - cos(4 * a));
       vertex(x, y);
     }
-    endShape();    */
+    endShape();    
     
     
 

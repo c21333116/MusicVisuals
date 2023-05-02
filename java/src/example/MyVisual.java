@@ -1,12 +1,13 @@
 package example;
 
+import c21333116.Heart;
 import ie.tudublin.*;
 
 public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
-    Heart h;
+    
 
     public void settings()
     {
